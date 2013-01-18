@@ -237,6 +237,12 @@ default['openstack']['endpoints']['volume-api']['path'] = "/v1/%(tenant_id)s"
 # The sql_connection variable would then be set to "mysql://keystone:password@192.168.0.3:keystone"
 # and could then be written to the keystone.conf file in a template.
 
+# Database used by the OpenStack Metering (Ceilometer) service
+default['openstack']['db']['compute']['db_type'] = "mysql"
+default['openstack']['db']['compute']['host'] = "127.0.0.1"
+default['openstack']['db']['compute']['port'] = "3306"
+default['openstack']['db']['compute']['db_name'] = "ceilometer"
+
 # Database used by the OpenStack Compute (Nova) service
 default['openstack']['db']['compute']['db_type'] = "mysql"
 default['openstack']['db']['compute']['host'] = "127.0.0.1"
